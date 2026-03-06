@@ -2,16 +2,67 @@
 <html>
 <head>
 <title>SkipTrace WHB</title>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+margin-top:100px;
+background:#f4f4f4;
+}
+
+input{
+padding:10px;
+width:250px;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+background:black;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.result{
+margin-top:20px;
+font-size:18px;
+}
+</style>
+
 </head>
 
-<body style="font-family:Arial;text-align:center;margin-top:100px">
+<body>
 
 <h1>SkipTrace WHB</h1>
-<p>Skip Trace Your Properties</p>
+<p>Your Skip Tracing Tool Is Live 🚀</p>
 
-<button onclick="alert('Search feature coming soon')">
-Search Lead
-</button>
+<input id="name" placeholder="Enter Name">
+
+<br>
+
+<button onclick="searchLead()">Search Lead</button>
+
+<div class="result" id="result"></div>
+
+<script>
+
+function searchLead(){
+
+let name=document.getElementById("name").value;
+
+if(name==""){
+document.getElementById("result").innerHTML="Enter a name first";
+return;
+}
+
+document.getElementById("result").innerHTML=
+"Searching records for: <b>"+name+"</b> ...";
+
+}
+
+</script>
 
 </body>
 </html>
